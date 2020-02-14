@@ -1,0 +1,12 @@
+<h2>My Brawlers</h2>
+<div class="brawlers-wrapper">
+  <ul class="brawlers">
+    <li 
+      *ngFor="let brawler of brawlers$ | async"
+      [class.selected]="brawler === selectedBrawler">
+      <a routerLink="/brawler/{{brawler.id}}">
+        <span class="badge">{{brawler.id}}</span> {{brawler.name}}
+      </a>
+    </li>
+  </ul>
+</div>
